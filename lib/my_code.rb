@@ -1,7 +1,13 @@
 # Your Code Here
 def map(source_array)
-  source_array.map do |a|
-    a * -1
+  new_array = []
+  counter = 0
+  while counter < source_array.length do
+  new_array << yield(array[counter])
+  counter += 1
   end
-  yield
-  end
+new_array
+end
+
+
+  
