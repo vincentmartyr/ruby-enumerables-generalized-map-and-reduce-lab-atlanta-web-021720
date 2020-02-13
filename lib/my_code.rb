@@ -9,13 +9,17 @@ def map(source_array)
 new_array
 end
 
-def reduce(source_array, starting_value = 0)
-result = 0
-counter = 0
-
+def reduce(source_array, starting_value = nil)
+if starting_value
+  sum = starting_value
+  counter = 0
+else
+  sum = source_array[0]
+  counter = 1
+end
   while counter < source_array.length
-    result += yield(source_array, starting_value)
+    sum = yield(source_array, sum)
     counter += 1
   end
-  result
+  sum
 end
