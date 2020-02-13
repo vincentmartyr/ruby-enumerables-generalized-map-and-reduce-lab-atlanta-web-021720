@@ -18,7 +18,7 @@ else
   counter = 1
 end
   while counter < source_array.length
-    sum = yield(sum, source_array[counter])
+    sum = yield(source_array[counter], sum)
     counter += 1
   end
   sum
