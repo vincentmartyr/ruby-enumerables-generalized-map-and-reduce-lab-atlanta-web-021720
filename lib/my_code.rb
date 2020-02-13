@@ -16,4 +16,6 @@ counter = 0
   while counter < source_array.length
     result += yield(source_array, starting_value)
     counter += 1
+  end
+  result
 end
