@@ -8,3 +8,12 @@ def map(source_array)
   end
 new_array
 end
+
+def reduce(source_array, starting_value = 0)
+result = 0
+counter = 0
+
+  while counter < source_array.length
+    result += yield(source_array, starting_value)
+    counter += 1
+end
